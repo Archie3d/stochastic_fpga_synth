@@ -35,6 +35,24 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 165 22)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 32 152 104 176))
+)
+(pin
+	(input)
+	(rect 96 816 264 832)
+	(text "INPUT" (rect 125 0 167 15)(font "Arial" (font_size 6)))
+	(text "MIDI_IN" (rect 5 0 61 16)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 157 22)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 24 832 96 856))
 )
 (pin
 	(output)
@@ -51,6 +69,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1668 464 1764 488))
 )
 (pin
 	(output)
@@ -67,6 +86,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1676 528 1772 552))
 )
 (symbol
 	(rect 400 72 720 248)
@@ -183,6 +203,105 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 152 80))
 	)
 )
+(symbol
+	(rect 320 776 536 856)
+	(text "UART_RX" (rect 5 0 79 16)(font "Arial" ))
+	(text "uart_rx" (rect 8 64 59 85)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "i_Clk" (rect 0 0 36 16)(font "Arial" ))
+		(text "i_Clk" (rect 21 27 57 43)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "i_RX_Serial" (rect 0 0 86 16)(font "Arial" ))
+		(text "i_RX_Serial" (rect 21 43 107 59)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "o_RX_DV" (rect 0 0 71 16)(font "Arial" ))
+		(text "o_RX_DV" (rect 135 27 206 43)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "o_RX_Byte[7..0]" (rect 0 0 120 16)(font "Arial" ))
+		(text "o_RX_Byte[7..0]" (rect 94 43 214 59)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48)(line_width 3))
+	)
+	(parameter
+		"g_CLKS_PER_BIT"
+		"3200"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 200 64))
+	)
+	(annotation_block (parameter)(rect 288 720 584 768))
+)
+(symbol
+	(rect 584 760 792 872)
+	(text "MIDI_IN" (rect 5 0 60 16)(font "Arial" ))
+	(text "midi_input_translation" (rect 8 96 172 117)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clk" (rect 0 0 23 16)(font "Arial" ))
+		(text "Clk" (rect 21 27 44 43)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Data_Ready" (rect 0 0 93 16)(font "Arial" ))
+		(text "Data_Ready" (rect 21 43 114 59)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Data_In[7..0]" (rect 0 0 95 16)(font "Arial" ))
+		(text "Data_In[7..0]" (rect 21 59 116 75)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "Note_On" (rect 0 0 66 16)(font "Arial" ))
+		(text "Note_On" (rect 132 27 198 43)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "Note_Off" (rect 0 0 66 16)(font "Arial" ))
+		(text "Note_Off" (rect 132 43 198 59)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "Note[6..0]" (rect 0 0 71 16)(font "Arial" ))
+		(text "Note[6..0]" (rect 127 59 198 75)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64)(line_width 3))
+	)
+	(port
+		(pt 208 80)
+		(output)
+		(text "Velocity[6..0]" (rect 0 0 95 16)(font "Arial" ))
+		(text "Velocity[6..0]" (rect 107 75 202 91)(font "Arial" ))
+		(line (pt 208 80)(pt 192 80)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 96))
+	)
+)
 (connector
 	(text "CLK" (rect 914 120 943 141)(font "Intel Clear" ))
 	(pt 720 144)
@@ -230,4 +349,43 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1424 520)
 	(pt 1424 496)
 )
+(connector
+	(pt 584 824)
+	(pt 536 824)
+	(bus)
+)
+(connector
+	(pt 584 808)
+	(pt 536 808)
+)
+(connector
+	(pt 584 792)
+	(pt 560 792)
+)
+(connector
+	(pt 320 808)
+	(pt 256 808)
+)
+(connector
+	(pt 256 808)
+	(pt 256 616)
+)
+(connector
+	(pt 560 616)
+	(pt 560 792)
+)
+(connector
+	(pt 560 616)
+	(pt 256 616)
+)
+(connector
+	(text "CLK" (rect 170 592 199 613)(font "Intel Clear" ))
+	(pt 256 616)
+	(pt 160 616)
+)
+(connector
+	(pt 320 824)
+	(pt 264 824)
+)
+(junction (pt 256 616))
 (text "Bump 50Mhz external clokc to 100Mhz that will be used for stochastic processing everywhere." (rect 168 32 971 55)(font "Intel Clear" (font_size 8)))
