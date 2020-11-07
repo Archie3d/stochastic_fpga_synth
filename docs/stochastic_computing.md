@@ -129,3 +129,7 @@ Now by replacing the one way integrator counter with a reversable integrator whi
 > which gives x0 = 0.29289,
 > or ~19195 in [0..65535] 16-bit integer range.
 > Also because now we integrate from 19195 to 65535, the integrated value must be adjusted as well to keep the output at 440Hz.
+
+Of course the produced waveform is only an aproximation and unlike a true sine has additional harmonics:
+
+![alg_sine_approximation_spectrum](images/alg_sine_approximation_spectrum.png)
