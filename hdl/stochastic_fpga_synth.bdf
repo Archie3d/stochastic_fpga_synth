@@ -1,0 +1,233 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 104 136 280 152)
+	(text "INPUT" (rect 133 0 175 15)(font "Arial" (font_size 6)))
+	(text "CLK_50M" (rect 5 0 78 16)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 165 22)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 1472 448 1668 464)
+	(text "OUTPUT" (rect 1 0 58 15)(font "Arial" (font_size 6)))
+	(text "AUDIO_LEFT" (rect 90 0 190 16)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1472 512 1676 528)
+	(text "OUTPUT" (rect 1 0 58 15)(font "Arial" (font_size 6)))
+	(text "AUDIO_RIGHT" (rect 90 0 198 21)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 400 72 720 248)
+	(text "PLL_50_100" (rect 103 0 238 23)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 156 33 172)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "inclk0" (rect 0 0 47 18)(font "Arial" (font_size 8)))
+		(text "inclk0" (rect 4 54 51 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 56 72))
+	)
+	(port
+		(pt 320 72)
+		(output)
+		(text "c0" (rect 0 0 20 18)(font "Arial" (font_size 8)))
+		(text "c0" (rect 299 54 319 72)(font "Arial" (font_size 8)))
+	)
+	(drawing
+		(text "Cyclone IV E" (rect 208 154 302 170)(font "Arial" ))
+		(text "inclk0 frequency: 50.000 MHz" (rect 66 65 284 81)(font "Arial" ))
+		(text "Operation Mode: Normal" (rect 66 82 247 98)(font "Arial" ))
+		(text "Clk " (rect 67 109 95 125)(font "Arial" ))
+		(text "Ratio" (rect 95 109 133 125)(font "Arial" ))
+		(text "Ph (dg)" (rect 132 109 187 125)(font "Arial" ))
+		(text "DC (%)" (rect 183 109 237 125)(font "Arial" ))
+		(text "c0" (rect 72 127 89 143)(font "Arial" ))
+		(text "2/1" (rect 101 127 124 143)(font "Arial" ))
+		(text "0.00" (rect 141 127 174 143)(font "Arial" ))
+		(text "50.00" (rect 188 127 230 143)(font "Arial" ))
+		(line (pt 0 0)(pt 321 0))
+		(line (pt 321 0)(pt 321 177))
+		(line (pt 0 177)(pt 321 177))
+		(line (pt 0 0)(pt 0 177))
+		(line (pt 64 107)(pt 230 107))
+		(line (pt 64 124)(pt 230 124))
+		(line (pt 64 142)(pt 230 142))
+		(line (pt 64 107)(pt 64 142))
+		(line (pt 92 107)(pt 92 142)(line_width 3))
+		(line (pt 129 107)(pt 129 142)(line_width 3))
+		(line (pt 180 107)(pt 180 142)(line_width 3))
+		(line (pt 229 107)(pt 229 142))
+		(line (pt 56 56)(pt 287 56))
+		(line (pt 287 56)(pt 287 159))
+		(line (pt 56 159)(pt 287 159))
+		(line (pt 56 56)(pt 56 159))
+		(line (pt 319 72)(pt 287 72))
+	)
+)
+(symbol
+	(rect 960 464 1072 512)
+	(text "LPM_CONSTANT" (rect 4 0 203 23)(font "Arial" (font_size 10)))
+	(text "inst33" (rect 3 37 52 55)(font "Arial" (font_size 8)))
+	(port
+		(pt 112 32)
+		(output)
+		(text "result[LPM_WIDTH-1..0]" (rect 75 19 282 37)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 19 128 37)(font "Arial" (font_size 8)))
+		(line (pt 64 32)(pt 112 32)(line_width 3))
+	)
+	(parameter
+		"LPM_CVALUE"
+		"6000"
+		"Unsigned value to which outputs will be set"
+	)
+	(parameter
+		"LPM_WIDTH"
+		"16"
+		"Width of output, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
+	)
+	(drawing
+		(text "(cvalue)" (rect 21 26 84 44)(font "Arial" (font_size 8)))
+		(line (pt 16 24)(pt 64 24))
+		(line (pt 16 40)(pt 64 40))
+		(line (pt 64 40)(pt 64 24))
+		(line (pt 16 40)(pt 16 24))
+	)
+	(annotation_block (parameter)(rect 936 384 1133 453))
+)
+(symbol
+	(rect 1184 448 1352 544)
+	(text "OSC_Sawtooth" (rect 5 0 133 23)(font "Intel Clear" (font_size 8)))
+	(text "inst6" (rect 8 71 44 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 34 23)(font "Intel Clear" (font_size 8)))
+		(text "CLK" (rect 21 27 55 50)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "FREQ[15..0]" (rect 0 0 101 23)(font "Intel Clear" (font_size 8)))
+		(text "FREQ[15..0]" (rect 21 43 122 66)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "L" (rect 0 0 10 23)(font "Intel Clear" (font_size 8)))
+		(text "L" (rect 137 27 147 50)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 32)(pt 152 32))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "R" (rect 0 0 11 23)(font "Intel Clear" (font_size 8)))
+		(text "R" (rect 136 43 147 66)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 48)(pt 152 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 80))
+	)
+)
+(connector
+	(text "CLK" (rect 914 120 943 141)(font "Intel Clear" ))
+	(pt 720 144)
+	(pt 952 144)
+)
+(connector
+	(pt 280 144)
+	(pt 400 144)
+)
+(connector
+	(pt 1184 496)
+	(pt 1072 496)
+	(bus)
+)
+(connector
+	(pt 1184 480)
+	(pt 1168 480)
+)
+(connector
+	(text "CLK" (rect 1144 293 1165 322)(font "Intel Clear" )(vertical))
+	(pt 1168 480)
+	(pt 1168 288)
+)
+(connector
+	(pt 1352 480)
+	(pt 1424 480)
+)
+(connector
+	(pt 1472 456)
+	(pt 1424 456)
+)
+(connector
+	(pt 1424 456)
+	(pt 1424 480)
+)
+(connector
+	(pt 1352 496)
+	(pt 1424 496)
+)
+(connector
+	(pt 1472 520)
+	(pt 1424 520)
+)
+(connector
+	(pt 1424 520)
+	(pt 1424 496)
+)
+(text "Bump 50Mhz external clokc to 100Mhz that will be used for stochastic processing everywhere." (rect 168 32 971 55)(font "Intel Clear" (font_size 8)))
