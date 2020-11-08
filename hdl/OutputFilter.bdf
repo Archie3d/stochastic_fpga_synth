@@ -1,0 +1,399 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 328 320 496 336)
+	(text "INPUT" (rect 125 0 167 15)(font "Arial" (font_size 6)))
+	(text "CLK" (rect 5 0 37 16)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 157 22)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 328 504 496 520)
+	(text "INPUT" (rect 125 0 167 15)(font "Arial" (font_size 6)))
+	(text "Input" (rect 5 0 44 21)(font "Intel Clear" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 157 22)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 2024 456 2200 472)
+	(text "OUTPUT" (rect 1 0 58 15)(font "Arial" (font_size 6)))
+	(text "Output" (rect 90 0 140 16)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 744 464 904 544)
+	(text "SC2B" (rect 5 0 47 16)(font "Arial" ))
+	(text "inst" (rect 8 64 33 80)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clk" (rect 0 0 23 16)(font "Arial" ))
+		(text "Clk" (rect 21 27 44 43)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Input" (rect 0 0 36 16)(font "Arial" ))
+		(text "Input" (rect 21 43 57 59)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "Q[bits-1..0]" (rect 0 0 82 16)(font "Arial" ))
+		(text "Q[bits-1..0]" (rect 70 27 152 43)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(port
+		(pt 160 48)
+		(output)
+		(text "Ready" (rect 0 0 48 16)(font "Arial" ))
+		(text "Ready" (rect 99 43 147 59)(font "Arial" ))
+		(line (pt 160 48)(pt 144 48))
+	)
+	(parameter
+		"BITS"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+	(annotation_block (parameter)(rect 904 416 1152 464))
+)
+(symbol
+	(rect 1832 432 1976 544)
+	(text "PWM8" (rect 5 0 53 16)(font "Arial" ))
+	(text "inst3" (rect 8 96 44 117)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clk" (rect 0 0 23 16)(font "Arial" ))
+		(text "Clk" (rect 21 27 44 43)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Input[7..0]" (rect 0 0 74 16)(font "Arial" ))
+		(text "Input[7..0]" (rect 21 43 95 59)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Sample" (rect 0 0 55 16)(font "Arial" ))
+		(text "Sample" (rect 21 59 76 75)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "Q" (rect 0 0 12 16)(font "Arial" ))
+		(text "Q" (rect 113 27 125 43)(font "Arial" ))
+		(line (pt 144 32)(pt 128 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 128 96))
+	)
+)
+(symbol
+	(rect 944 448 1112 560)
+	(text "FIR_Decimate8" (rect 5 0 119 16)(font "Arial" ))
+	(text "firdec8" (rect 8 96 58 112)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clk" (rect 0 0 23 16)(font "Arial" ))
+		(text "Clk" (rect 21 27 44 43)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Input[7..0]" (rect 0 0 74 16)(font "Arial" ))
+		(text "Input[7..0]" (rect 21 43 95 59)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Sample" (rect 0 0 55 16)(font "Arial" ))
+		(text "Sample" (rect 21 59 76 75)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "Q[15..0]" (rect 0 0 60 16)(font "Arial" ))
+		(text "Q[15..0]" (rect 97 27 157 43)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "Ready" (rect 0 0 48 16)(font "Arial" ))
+		(text "Ready" (rect 107 43 155 59)(font "Arial" ))
+		(line (pt 168 48)(pt 152 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 96))
+	)
+)
+(symbol
+	(rect 1176 504 1368 584)
+	(text "Split_7_9" (rect 5 0 74 16)(font "Arial" ))
+	(text "inst2" (rect 8 64 43 80)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clk" (rect 0 0 23 16)(font "Arial" ))
+		(text "Clk" (rect 21 27 44 43)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Input[15..0]" (rect 0 0 83 16)(font "Arial" ))
+		(text "Input[15..0]" (rect 21 43 104 59)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 192 32)
+		(output)
+		(text "Q15_9[6..0]" (rect 0 0 88 16)(font "Arial" ))
+		(text "Q15_9[6..0]" (rect 97 27 185 43)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32)(line_width 3))
+	)
+	(port
+		(pt 192 48)
+		(output)
+		(text "Q8_0[8..0]" (rect 0 0 79 16)(font "Arial" ))
+		(text "Q8_0[8..0]" (rect 105 43 184 59)(font "Arial" ))
+		(line (pt 192 48)(pt 176 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 176 64))
+	)
+)
+(symbol
+	(rect 1504 552 1664 632)
+	(text "B2SC" (rect 5 0 47 16)(font "Arial" ))
+	(text "inst4" (rect 8 64 43 80)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clk" (rect 0 0 23 16)(font "Arial" ))
+		(text "Clk" (rect 21 27 44 43)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Input[bits-1..0]" (rect 0 0 106 16)(font "Arial" ))
+		(text "Input[bits-1..0]" (rect 21 43 127 59)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "Q" (rect 0 0 12 16)(font "Arial" ))
+		(text "Q" (rect 129 27 141 43)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(parameter
+		"BITS"
+		"9"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"SEED"
+		"1"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+	(annotation_block (parameter)(rect 1664 480 1909 549))
+)
+(connector
+	(pt 944 496)
+	(pt 904 496)
+	(bus)
+)
+(connector
+	(pt 744 496)
+	(pt 712 496)
+)
+(connector
+	(pt 744 512)
+	(pt 496 512)
+)
+(connector
+	(pt 904 512)
+	(pt 944 512)
+)
+(connector
+	(pt 712 328)
+	(pt 712 496)
+)
+(connector
+	(pt 496 328)
+	(pt 712 328)
+)
+(connector
+	(pt 944 480)
+	(pt 928 480)
+)
+(connector
+	(pt 928 480)
+	(pt 928 328)
+)
+(connector
+	(pt 712 328)
+	(pt 928 328)
+)
+(connector
+	(pt 1440 600)
+	(pt 1504 600)
+	(bus)
+)
+(connector
+	(pt 1504 584)
+	(pt 1472 584)
+)
+(connector
+	(pt 1472 584)
+	(pt 1472 328)
+)
+(connector
+	(pt 1168 552)
+	(pt 1176 552)
+	(bus)
+)
+(connector
+	(text "pwm[7..1]" (rect 1378 512 1451 533)(font "Intel Clear" ))
+	(pt 1368 536)
+	(pt 1440 536)
+	(bus)
+)
+(connector
+	(pt 1440 552)
+	(pt 1368 552)
+	(bus)
+)
+(connector
+	(pt 1440 600)
+	(pt 1440 552)
+	(bus)
+)
+(connector
+	(pt 1168 480)
+	(pt 1168 552)
+	(bus)
+)
+(connector
+	(pt 1112 480)
+	(pt 1168 480)
+	(bus)
+)
+(connector
+	(pt 1176 536)
+	(pt 1136 536)
+)
+(connector
+	(pt 1136 536)
+	(pt 1136 328)
+)
+(connector
+	(pt 928 328)
+	(pt 1136 328)
+)
+(connector
+	(pt 2024 464)
+	(pt 1976 464)
+)
+(connector
+	(pt 1832 464)
+	(pt 1808 464)
+)
+(connector
+	(pt 1808 328)
+	(pt 1808 464)
+)
+(connector
+	(text "pwm[7..0]" (rect 1770 456 1843 477)(font "Intel Clear" ))
+	(pt 1832 480)
+	(pt 1760 480)
+	(bus)
+)
+(connector
+	(pt 1112 496)
+	(pt 1832 496)
+)
+(connector
+	(pt 1136 328)
+	(pt 1472 328)
+)
+(connector
+	(pt 1472 328)
+	(pt 1808 328)
+)
+(connector
+	(text "pwm[0]" (rect 1690 560 1746 581)(font "Intel Clear" ))
+	(pt 1664 584)
+	(pt 1728 584)
+)
+(junction (pt 712 328))
+(junction (pt 928 328))
+(junction (pt 1472 328))
+(junction (pt 1136 328))

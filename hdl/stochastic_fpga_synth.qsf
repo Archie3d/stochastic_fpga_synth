@@ -71,4 +71,10 @@ set_global_assignment -name VHDL_FILE SC_Delay.vhd
 set_global_assignment -name VHDL_FILE SC_Add.vhd
 set_global_assignment -name BDF_FILE SC_Self_OR.bdf
 set_global_assignment -name BDF_FILE SC_Self_AND.bdf
+set_global_assignment -name VHDL_FILE SC2B.vhd
+set_global_assignment -name VHDL_FILE FIR_Decimate8.vhd
+set_global_assignment -name VHDL_FILE SigmaDelta.vhd
+set_global_assignment -name BDF_FILE OutputFilter.bdf
+set_global_assignment -name VHDL_FILE PWM8.vhd
+set_global_assignment -name VHDL_FILE Split_7_9.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
