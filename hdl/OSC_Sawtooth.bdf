@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 1664 608 1840 624)
+	(rect 1896 592 2072 608)
 	(text "OUTPUT" (rect 1 0 58 15)(font "Arial" (font_size 6)))
 	(text "L" (rect 90 0 99 16)(font "Arial" ))
 	(pt 0 8)
@@ -70,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 1664 864 1840 880)
+	(rect 1888 848 2064 864)
 	(text "OUTPUT" (rect 1 0 58 15)(font "Arial" (font_size 6)))
 	(text "R" (rect 90 0 100 21)(font "Intel Clear" ))
 	(pt 0 8)
@@ -352,6 +352,64 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(annotation_block (parameter)(rect 1288 768 1533 837))
 )
+(symbol
+	(rect 1640 824 1800 920)
+	(text "SC_Self_OR" (rect 5 0 106 23)(font "Intel Clear" (font_size 8)))
+	(text "inst11" (rect 8 71 54 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 34 23)(font "Intel Clear" (font_size 8)))
+		(text "CLK" (rect 21 27 55 50)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Input" (rect 0 0 44 23)(font "Intel Clear" (font_size 8)))
+		(text "Input" (rect 21 43 65 66)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "Output" (rect 0 0 61 23)(font "Intel Clear" (font_size 8)))
+		(text "Output" (rect 78 27 139 50)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 80))
+	)
+)
+(symbol
+	(rect 1640 568 1800 664)
+	(text "SC_Self_OR" (rect 5 0 106 23)(font "Intel Clear" (font_size 8)))
+	(text "inst12" (rect 8 71 54 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 34 23)(font "Intel Clear" (font_size 8)))
+		(text "CLK" (rect 21 27 55 50)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Input" (rect 0 0 44 23)(font "Intel Clear" (font_size 8)))
+		(text "Input" (rect 21 43 65 66)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "Output" (rect 0 0 61 23)(font "Intel Clear" (font_size 8)))
+		(text "Output" (rect 78 27 139 50)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 80))
+	)
+)
 (connector
 	(pt 1040 648)
 	(pt 896 648)
@@ -388,10 +446,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 1328 616)
 	(pt 1280 616)
-)
-(connector
-	(pt 1488 616)
-	(pt 1664 616)
 )
 (connector
 	(pt 1040 904)
@@ -449,10 +503,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 1488 872)
-	(pt 1664 872)
-)
-(connector
 	(pt 432 456)
 	(pt 688 456)
 )
@@ -470,23 +520,11 @@ https://fpgasoftware.intel.com/eula.
 )
 (connector
 	(pt 968 456)
-	(pt 1280 456)
-)
-(connector
-	(pt 968 456)
 	(pt 968 632)
 )
 (connector
 	(pt 968 632)
 	(pt 968 888)
-)
-(connector
-	(pt 1280 456)
-	(pt 1280 616)
-)
-(connector
-	(pt 1280 616)
-	(pt 1280 872)
 )
 (connector
 	(pt 424 664)
@@ -498,10 +536,60 @@ https://fpgasoftware.intel.com/eula.
 	(pt 736 664)
 	(bus)
 )
+(connector
+	(pt 968 456)
+	(pt 1280 456)
+)
+(connector
+	(pt 1280 456)
+	(pt 1616 456)
+)
+(connector
+	(pt 1280 456)
+	(pt 1280 616)
+)
+(connector
+	(pt 1280 616)
+	(pt 1280 872)
+)
+(connector
+	(pt 1640 600)
+	(pt 1616 600)
+)
+(connector
+	(pt 1800 600)
+	(pt 1896 600)
+)
+(connector
+	(pt 1488 872)
+	(pt 1640 872)
+)
+(connector
+	(pt 1616 856)
+	(pt 1640 856)
+)
+(connector
+	(pt 1616 456)
+	(pt 1616 600)
+)
+(connector
+	(pt 1616 600)
+	(pt 1616 856)
+)
+(connector
+	(pt 1800 856)
+	(pt 1888 856)
+)
+(connector
+	(pt 1640 616)
+	(pt 1488 616)
+)
 (junction (pt 688 456))
 (junction (pt 688 648))
 (junction (pt 968 632))
 (junction (pt 968 456))
 (junction (pt 1280 616))
 (junction (pt 648 664))
+(junction (pt 1280 456))
+(junction (pt 1616 600))
 (text "Sawtooth oscillator with stereo output" (rect 888 344 1213 367)(font "Intel Clear" (font_size 8)))
