@@ -592,4 +592,3 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 648 664))
 (junction (pt 1280 456))
 (junction (pt 1616 600))
-(text "Sawtooth oscillator with stereo output" (rect 888 344 1213 367)(font "Intel Clear" (font_size 8)))

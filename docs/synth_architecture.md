@@ -5,3 +5,7 @@
 
 ## Voice
 ![hdl_3x_sawtooth_voice](images/hdl_3x_sawtooth_voice.png)
+
+## Sawtooth oscillator
+
+![hdl_osc_sawtooth](images/hdl_osc_sawtooth.png)
