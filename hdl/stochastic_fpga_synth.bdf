@@ -1550,4 +1550,3 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 1328 312))
 (junction (pt 2024 544))
 (junction (pt 960 312))
-(text "Bump 50Mhz external clokc to 100Mhz that will be used for stochastic processing everywhere." (rect 168 32 971 55)(font "Intel Clear" (font_size 8)))
